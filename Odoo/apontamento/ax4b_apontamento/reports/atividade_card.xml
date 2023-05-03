@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="apontamento_atividade">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <div class="container">
+                    <t t-call="web.layout">
+                        <div class="page">
+                            <h2>
+                                Atividade:
+                                <span t-field="o.name" class="font-weight-bold" />
+                            </h2>
+                            <p>
+                                Desenvolvedor:
+                                <span t-field="o.desenvolvedor_id" class="font-weight-bold" />
+                            </p>
+                            <p class="font-weight-bold">
+                                Atividade Finalizado?
+                                <t t-if="o.esta_finalizado">
+                                    <span>Sim</span>
+                                </t>
+                                <t t-else="">
+                                    <span>Não</span>
+                                </t>
+
+                            </p>
+                            <p class="alert alert-warning">
+                                Tempo Total:
+                                <span t-field="o.total_horas" class="font-weight-bold" />
+                                horas.
+                            </p>
+                            <table style="width:100%" class="table table-striped ">
+                                <tr class="text-center">
+                                    <th scope="col">Atividade</th>
+                                    <th scope="col">Iniciado em</th>
+                                    <th scope="col">Finalizado em</th>
+                                    <th scope="col">Tempo Atividade</th>
+                                </tr>
+                                <tr t-foreach="o.apontamento_ids" t-as="field">
+                                    <td>
+                                        <span t-esc="field.atividade" />
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="field.data_inicio" t-options='{"widget": "datetime"}' />
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="field.data_fim" t-options='{"widget": "datetime"}' />
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="field.total" />
+                                    </td>
+                                </tr>
+                            </table>
+                            <p class="alert alert-warning float-right">
+                                Tempo Total:
+                                <span t-field="o.total_horas" class="font-weight-bold" />
+                                horas.
+                            </p>
+                        </div>
+                    </t>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

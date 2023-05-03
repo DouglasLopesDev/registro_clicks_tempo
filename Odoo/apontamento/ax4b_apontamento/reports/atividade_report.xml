@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    :
+    <!-- name and file: folder.id_of_template -->
+
+    <report id="apontamento_atividade_card" string="Relatório de Atividades" model="apontamento.atividade" report_type="qweb-html" name="ax4b_apontamento.apontamento_atividade" file="ax4b_apontamento.apontamento_atividade" />
+</odoo>

@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_apontamento_apontamento,apontamento.apontamento,model_apontamento_apontamento,base.group_user,1,1,1,1
+access_apontamento_atividade,apontamento.apontamento.atividade,model_apontamento_atividade,base.group_user,1,1,1,1
+access_apontamento_ambiente,apontamento.apontamento.ambiente,model_apontamento_ambiente,base.group_user,1,1,1,1
+access_apontamento_categoria,apontamento.apontamento.categoria,model_apontamento_categoria,base.group_user,1,1,1,1
