@@ -1,0 +1,17 @@
+.Container-history {
+    padding: 5px;
+    background-color: #a1acc2;
+    color: #000000;
+    border-radius: 20px;
+    /* margin: 20px; */
+}
+
+.History-Result{
+    display: block;
+    border-radius: 20px;
+    background-color: #212627;
+    color: #ffffff;
+    text-align: left;
+    padding: 5px;
+    margin: 5px;
+}
